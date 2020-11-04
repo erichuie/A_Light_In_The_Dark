@@ -8,6 +8,7 @@ public class PlayerMovementLite : MonoBehaviour
 
     public Rigidbody2D rb;
     public float speed;
+    public float sprintSpeed;
     public float jumpSpeed;
     bool isGrounded = false;
     public Transform isGroundedChecker;
@@ -20,10 +21,11 @@ public class PlayerMovementLite : MonoBehaviour
 
     public float horizontalMove = 0f;
 
+    float x;
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("begin");
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -31,28 +33,26 @@ public class PlayerMovementLite : MonoBehaviour
     void Update()
     {
         //horizontal and jump movement
-        float x = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(x * speed, rb.velocity.y);
+
+        //sprinting 
+        if (Input.GetKey(KeyCode.LeftShift)){
+            x = Input.GetAxis("Horizontal") * sprintSpeed;
+        }
+        //no sprinting
+        else{
+            x = Input.GetAxis("Horizontal");
+        }
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || Time.time - 
         prevTimeGrounded <= groundedMemory))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
-         BetterJump();
+        BetterJump();
         CheckIfGrounded();
-        Sprint();
     }
 
     void FixedUpdate(){
-
-    }
-
-    void Sprint(){
-        if (Input.GetKeyDown(KeyCode.LeftShift)){
-            print("works");
-            float x = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(x * speed, rb.velocity.y);
-        }
+        rb.velocity = new Vector2(x * speed, rb.velocity.y);
     }
 
     void BetterJump(){

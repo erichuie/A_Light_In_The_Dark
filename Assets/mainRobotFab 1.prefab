@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 919280429494503667}
   - component: {fileID: 919280429494503666}
   - component: {fileID: 9211481635295619996}
+  - component: {fileID: 8285594535652935490}
   m_Layer: 0
   m_Name: mainRobotFab 1
   m_TagString: Player
@@ -165,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 919280429494503669}
   speed: 5
+  sprintSpeed: 0
   jumpSpeed: 15
   isGroundedChecker: {fileID: 919280429655924804}
   checkGroundRadius: 0.1
@@ -172,6 +174,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   groundedMemory: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 10
+  horizontalMove: 0
 --- !u!114 &9211481635295619996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +187,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ebb826d90525d846a5747b793c3e7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
+  player: {fileID: 0}
+  triggerToScene2: {fileID: 0}
+  triggerToScene1: {fileID: 0}
+--- !u!114 &8285594535652935490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919280429494503672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aed1d9071bd7ff45a1f05c781aa337b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &919280429655924805
