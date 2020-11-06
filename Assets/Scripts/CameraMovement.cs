@@ -9,6 +9,7 @@ public class CameraMovement : MonoBehaviour
     public GameObject triggerToScene2;
     public GameObject triggerToScene1;
 
+
     void OnTriggerEnter2D(Collider2D collision) {
          if (collision.tag == "enterToScene2") {
             triggerToScene1.SetActive(false);
@@ -24,16 +25,19 @@ public class CameraMovement : MonoBehaviour
             StartCoroutine("CoroutineTest2");
 
          }
+         else if(collision.tag == "enterSideToScene2"){
+
+         }
     }
 
     IEnumerator CoroutineTest1() {
-             yield return new WaitForSeconds((float)1);
-            triggerToScene1.SetActive(true);
+         yield return new WaitForSeconds((float)5);
+         triggerToScene1.SetActive(true);
             //  mainCam.transform.position = new Vector3(mainCam.transform.position.x, mainCam.transform.position.y + 15, mainCam.transform.position.z);
          } 
     IEnumerator CoroutineTest2() {
-            yield return new WaitForSeconds((float)1);
-        triggerToScene2.SetActive(true);
+         yield return new WaitForSeconds((float)1);
+         triggerToScene2.SetActive(true);
         //  mainCam.transform.position = new Vector3(mainCam.transform.position.x, mainCam.transform.position.y + 15, mainCam.transform.position.z);
         } 
 }

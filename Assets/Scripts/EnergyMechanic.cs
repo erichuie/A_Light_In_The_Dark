@@ -40,7 +40,7 @@ public class EnergyMechanic : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-            if (collision.gameObject.tag == "Star")
+            if (collision.gameObject.tag == "Star1")
            {
                 timeRemaining = 25;
            }

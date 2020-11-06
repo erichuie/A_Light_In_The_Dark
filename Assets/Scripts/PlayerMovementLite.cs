@@ -23,10 +23,13 @@ public class PlayerMovementLite : MonoBehaviour
 
     float x;
 
+    //public VectorVal startingPosition;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //transform.position = startingPosition.initialVal;
     }
 
     // Update is called once per frame

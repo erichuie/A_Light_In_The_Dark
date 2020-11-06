@@ -6,7 +6,8 @@ TagManager:
   tags:
   - enterToScene2
   - enterToScene1
-  - Star
+  - enterSideToScene2
+  - Star1
   layers:
   - Default
   - TransparentFX

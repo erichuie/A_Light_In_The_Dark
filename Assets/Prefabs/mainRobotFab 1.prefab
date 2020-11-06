@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 919280429494503672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.51, y: -3.37, z: 1}
-  m_LocalScale: {x: 6.944106, y: 6.8595815, z: 1}
+  m_LocalScale: {x: 6.9441056, y: 6.8595815, z: 1}
   m_Children:
   - {fileID: 919280430374189098}
   - {fileID: 919280429655924804}
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &919280429494503668
 BoxCollider2D:
@@ -119,11 +119,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 919280429494503672}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c5b94d3b24ee12e4f8cb506f003bb63b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000052154064, y: 0.028830409}
+  m_Offset: {x: -0.00082376413, y: 0.028830409}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1259365, y: 0.16796479}
+  m_Size: {x: 0.07815671, y: 0.16796479}
   m_EdgeRadius: 0
 --- !u!58 &919280429494503667
 CircleCollider2D:
@@ -145,13 +145,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 919280429494503672}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c5b94d3b24ee12e4f8cb506f003bb63b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.003515911, y: -0.08039351}
+  m_Offset: {x: -0.0011413291, y: -0.067893}
   serializedVersion: 2
-  m_Radius: 0.04420657
+  m_Radius: 0.041833512
 --- !u!114 &919280429494503666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,14 +166,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 919280429494503669}
   speed: 5
-  sprintSpeed: 0
+  sprintSpeed: 2
   jumpSpeed: 15
   isGroundedChecker: {fileID: 919280429655924804}
   checkGroundRadius: 0.1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 512
-  groundedMemory: 0
+    m_Bits: 256
+  groundedMemory: 0.1
   fallMultiplier: 2.5
   lowJumpMultiplier: 10
   horizontalMove: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 919280429494503672}
   triggerToScene2: {fileID: 0}
   triggerToScene1: {fileID: 0}
 --- !u!114 &8285594535652935490
@@ -205,6 +205,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aed1d9071bd7ff45a1f05c781aa337b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeRemaining: 25
+  robot: {fileID: 919280429494503672}
+  spriteArr:
+  - {fileID: 21300000, guid: 6a55db586e7b2fa4385c586ac0e6bee3, type: 3}
+  - {fileID: 21300000, guid: f642504e4cbffba45892a5d1e1cc0973, type: 3}
+  - {fileID: 21300000, guid: e00217cbb8d6d9a42ac9c720061e27db, type: 3}
+  - {fileID: 21300000, guid: 8191492bf87a3454c92179933661be5b, type: 3}
+  - {fileID: 21300000, guid: 8c014e5f1009aff42841cb8d68428c82, type: 3}
 --- !u!1 &919280429655924805
 GameObject:
   m_ObjectHideFlags: 0
