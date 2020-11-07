@@ -25,9 +25,6 @@ public class CameraMovement : MonoBehaviour
             StartCoroutine("CoroutineTest2");
 
          }
-         else if(collision.tag == "enterSideToScene2"){
-
-         }
     }
 
     IEnumerator CoroutineTest1() {
