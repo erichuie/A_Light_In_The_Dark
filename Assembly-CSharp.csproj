@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\EndGameVictory.cs" />
      <Compile Include="Assets\Scripts\EnergyMechanic.cs" />
      <Compile Include="Assets\Scripts\GravityChange.cs" />
      <Compile Include="Assets\Scripts\GreenStarAction.cs" />
@@ -46,6 +47,7 @@
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\StarActions.cs" />
      <Compile Include="Assets\Scripts\StarAnimation.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\VanishPlatform.cs" />
      <Compile Include="Assets\Scripts\VectorVal.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -58,6 +60,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Fonts\license.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

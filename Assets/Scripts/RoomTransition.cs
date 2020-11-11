@@ -14,7 +14,8 @@ public class RoomTransition : MonoBehaviour
 
 
     void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("Player") && Input.GetAxis("Horizontal")==1){
+        // && Input.GetAxis("Horizontal")==1
+        if(collision.CompareTag("Player")){
             cam.transform.position = new Vector3(cam.transform.position.x + (float)13.35, cam.transform.position.y, cam.transform.position.z);
             collision.transform.position += playerChange;
             wallToPreventLeft.SetActive(true);
@@ -25,5 +26,7 @@ public class RoomTransition : MonoBehaviour
         //     cam.transform.position = new Vector3(cam.transform.position.x - (float)13.35, cam.transform.position.y, cam.transform.position.z);
         //     collision.transform.position -= playerChange;
         // }
+
+
     }
 }

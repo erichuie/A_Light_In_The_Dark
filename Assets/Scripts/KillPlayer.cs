@@ -11,9 +11,11 @@ public class KillPlayer : MonoBehaviour
         if (collision.transform.CompareTag("Player")){
             collision.transform.position = spawnPoint.position;
             for (int i=0; i<objArr.Length; i++){
-                if (!objArr[i].active){
-                    objArr[i].SetActive(true);
-                }
+                objArr[i].SetActive(false);
+                objArr[i].SetActive(true);
+                // if (!objArr[i].active){
+                //     objArr[i].SetActive(true);
+                // }
             }
         }
     }
