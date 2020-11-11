@@ -20,8 +20,10 @@ public class PlayerMovementLite : MonoBehaviour
     public float lowJumpMultiplier = 10f;
 
     public float horizontalMove = 0f;
-
     float x;
+
+    int defaultAddedJumps = 0;
+    int addedJumps;
 
     //public VectorVal startingPosition;
 
@@ -50,12 +52,24 @@ public class PlayerMovementLite : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
+        if (addedJumps > 0){
+            if(Input.GetKeyDown(KeyCode.Space)) {
+                rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+                addedJumps--;
+            }
+        }
         BetterJump();
         CheckIfGrounded();
     }
 
     void FixedUpdate(){
         rb.velocity = new Vector2(x * speed, rb.velocity.y);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision){
+        if (collision.tag == "greenStar"){
+            addedJumps++;
+        }
     }
 
     void BetterJump(){
@@ -71,6 +85,7 @@ public class PlayerMovementLite : MonoBehaviour
         if (collider != null)
         {
             isGrounded = true;
+            addedJumps = defaultAddedJumps;
         }
         else
         {

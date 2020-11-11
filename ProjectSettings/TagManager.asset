@@ -9,6 +9,7 @@ TagManager:
   - enterSideToScene2
   - Star1
   - purpleStar
+  - greenStar
   layers:
   - Default
   - TransparentFX

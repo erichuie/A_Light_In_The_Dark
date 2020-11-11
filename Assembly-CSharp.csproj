@@ -36,14 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\GravityChange.cs" />
-     <Compile Include="Assets\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\EnergyMechanic.cs" />
+     <Compile Include="Assets\Scripts\GravityChange.cs" />
+     <Compile Include="Assets\Scripts\GreenStarAction.cs" />
+     <Compile Include="Assets\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementLite.cs" />
      <Compile Include="Assets\Scripts\RoomTransition.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\StarActions.cs" />
+     <Compile Include="Assets\Scripts\StarAnimation.cs" />
      <Compile Include="Assets\Scripts\VanishPlatform.cs" />
      <Compile Include="Assets\Scripts\VectorVal.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
