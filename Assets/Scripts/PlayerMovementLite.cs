@@ -40,7 +40,7 @@ public class PlayerMovementLite : MonoBehaviour
         //horizontal and jump movement
 
         //sprinting 
-        if (Input.GetKey(KeyCode.LeftShift)){
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)){
             x = Input.GetAxis("Horizontal") * sprintSpeed;
         }
         //no sprinting
@@ -55,7 +55,7 @@ public class PlayerMovementLite : MonoBehaviour
         if (addedJumps > 0){
             if(Input.GetKeyDown(KeyCode.Space)) {
                 rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-                addedJumps--;
+                addedJumps=0;
             }
         }
         BetterJump();
@@ -68,7 +68,7 @@ public class PlayerMovementLite : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.tag == "greenStar"){
-            addedJumps++;
+            addedJumps=1;
         }
     }
 
