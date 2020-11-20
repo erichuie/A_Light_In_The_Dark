@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\GreenStarAction.cs" />
      <Compile Include="Assets\Scripts\GreenStarController.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\LifeMechanic.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementLite.cs" />
      <Compile Include="Assets\Scripts\RoomTransition.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
